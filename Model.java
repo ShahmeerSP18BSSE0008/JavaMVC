@@ -55,6 +55,7 @@ public class Model {
 		ResultSet resultSet = null;
 		Statement st = connection.createStatement();
 		ResultSet resultSet1 = st.executeQuery("select" + "column" + "from Employee where employeeID= " + "employeeID");
+		connection.close();
 		resultSet=resultSet1;
 		return resultSet;
 	}
@@ -63,6 +64,7 @@ public class Model {
 		ResultSet resultSet = null;
 		Statement st = connection.createStatement();
 		ResultSet resultSet1 = st.executeQuery("select * from Employee");
+		connection.close();
 		resultSet=resultSet1;
 		return resultSet;
 		
